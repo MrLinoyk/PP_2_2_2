@@ -7,7 +7,7 @@
     <style>table th, table td {padding: 5px;}</style>
 </head>
 <body>
-<h1>th:each</h1>
+<h1>All cars</h1>
 <table border="1">
     <tr>
         <th>Model</th>
@@ -15,10 +15,10 @@
         <th>isActual</th>
     </tr>
 
-    <tr th:each="lst : ${carsArray}">
-        <td th:utext="${lst.model}">brand</td>
-        <td th:utext="${lst.year}">color</td>
-        <td th:utext="${lst.isActual()}">power</td>
+    <tr th:each="lst : ${cars}">
+        <td th:utext="${lst.getModel()}">model</td>
+        <td th:utext="${lst.getYear()}">year</td>
+        <td th:utext="${lst.isActual()}">isActual</td>
     </tr>
 </table>
 </body>
